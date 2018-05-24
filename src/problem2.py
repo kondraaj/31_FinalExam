@@ -8,6 +8,7 @@ Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
 
 import time
 import testing_helper
+import math
 
 
 def main():
@@ -19,9 +20,9 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    # run_test_problem2a()
-    # run_test_problem2b()
-    # run_test_problem2c()
+    run_test_problem2a()
+    run_test_problem2b()
+    run_test_problem2c()
 
 
 def is_prime(n):
@@ -169,8 +170,13 @@ def problem2a(x, sequence):
       :type x:    int
       :type sequence:  [int]
     """
+    new_list = []
+    for k in range(len(sequence)):
+        if sequence[k] > x:
+            new_list = new_list + [sequence[k]]
+    return new_list
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -249,8 +255,13 @@ def problem2b(sequence):
     Type hints:
       :type sequence  [int]
     """
+    x = 0
+    for k in range(len(sequence)):
+        if math.fabs(sequence[k]) > math.fabs(sequence[x]):
+            x = k
+    return x
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -392,8 +403,15 @@ def problem2c(x):
     Type hints:
       :type x:    int
     """
+    a = x
+    while True:
+        if is_prime(sum_of_digits(a)) is True:
+            if a >= x:
+                if is_prime(a) is True:
+                    return a
+        a = a + 1
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
