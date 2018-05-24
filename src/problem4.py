@@ -36,16 +36,19 @@ class Pig(object):
         What comes in:  The Pig's weight (in pounds).
         Side effects: Sets instance variables as needed by the other methods.
         """
+        self.weight = weight
         # TODO: Implement and test this method.
 
     def get_weight(self):
         """ Returns this Pig's weight. """
+        return self.weight
         # TODO: Implement and test this method.
 
     def eat(self, pounds_of_slop):
         """
         Increments this Pig's weight by the given pounds_of_slop.
         """
+        self.weight = self.weight + pounds_of_slop
         # TODO: Implement and test this method.
 
     def eat_for_a_year(self):
@@ -58,6 +61,8 @@ class Pig(object):
           -- eat 364 pounds of slop, then
           -- eat 365 pounds of slop.
         """
+        for k in range(365):
+            self.eat(k + 1)
         # TODO: Implement and test this method.
 
     def heavier_pig(self, other_pig):
@@ -65,6 +70,7 @@ class Pig(object):
         Returns either this Pig object or the other given Pig object,
         whichever is heavier.
         """
+
         # TODO: Implement and test this method.
 
     def new_pig(self, other_pig):

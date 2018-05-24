@@ -74,6 +74,27 @@ And this one for n=14:
 
     :type n: int
     """
+    x = 1
+    seq = []
+    for k in range(n):
+        if x == 10:
+            x = 0
+        seq = seq + [x]
+        x = x + 1
+    for k in range(n):
+        for j in range(n - k - 1):
+            print(' ', end='')
+        for i in range(k + 1):
+            print(seq[i], end='')
+        print(' ', end='')
+        for h in range(k + 2):
+            print('*', end='')
+        print(' ', end='')
+        for g in range(len(seq)-k-1, -1, -1):
+            print(seq[g], end='')
+        print('')
+
+
     # ------------------------------------------------------------------
     # TODO: Implement and test this function.
     #          Some tests are already written for you (above).

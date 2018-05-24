@@ -135,6 +135,8 @@ def problem5(m, numbers1, numbers2):
     Type hints:
       :type [str]
     """
+    for k in range(len(numbers1)):
+
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
