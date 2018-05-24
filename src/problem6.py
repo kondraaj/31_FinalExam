@@ -96,7 +96,7 @@ And this one for n=14:
 
 
     # ------------------------------------------------------------------
-    # TODO: Implement and test this function.
+    # DONE: Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In solving this problem,
