@@ -94,7 +94,6 @@ And this one for n=14:
             print(seq[g], end='')
         print('')
 
-
     # ------------------------------------------------------------------
     # DONE: Implement and test this function.
     #          Some tests are already written for you (above).

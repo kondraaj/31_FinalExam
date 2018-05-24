@@ -92,8 +92,8 @@ def problem1a(numbers):
     x = numbers[0]
     y = numbers[-1]
     z = numbers[len(numbers)//2]
-    sum = x + y + z
-    return sum
+    summa = x + y + z
+    return summa
     # -------------------------------------------------------------------------
     # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
